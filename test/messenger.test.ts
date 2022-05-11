@@ -6,6 +6,9 @@ import importService from '../src/services/import.service'
 
 //helper class
 class TestChatManager implements IChatManager {
+    isActive(): boolean {
+        throw new Error("Method not implemented.");
+    }
     private users = [
         {phone: "1", firstName: "A1", lastName: "A2"},
         {phone: "2", firstName: "B1", lastName: "B2"},
