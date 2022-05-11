@@ -30,7 +30,7 @@ export default class TelegramCommunicatorGram implements IChatManager {
         await this.connect()
 
         if (this.client) {
-            const dialogs = await this.client.getDialogs({limit: 100});
+            const dialogs = await this.client.getDialogs({limit: 0});
 
             const chat = dialogs.find(x => x.title === this.initParams.chatTitle)
             this.chat = chat
